@@ -1,0 +1,8 @@
+<?jelly escape-by-default='true' ?>
+<j:jelly xmlns:j="jelly:core">
+  <ol id='ecp_${paramName}'>
+    <j:forEach var="entry" items="${it.getChoices().values()}">
+      <li>${entry}</li>
+    </j:forEach>
+  </ol>
+</j:jelly>

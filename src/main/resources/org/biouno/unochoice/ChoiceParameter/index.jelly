@@ -1,0 +1,10 @@
+<?jelly escape-by-default='true' ?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
+  ${it.parameters.clear()}
+  <st:include page="/org/biouno/unochoice/common/choiceParameterCommon.jelly"/>
+  <script type="text/javascript">
+    <j:if test="${it.filterable}">
+        UnoChoice.renderChoiceParameter('${paramName}', ${it.getFilterLength()});
+    </j:if>
+  </script>
+</j:jelly>
